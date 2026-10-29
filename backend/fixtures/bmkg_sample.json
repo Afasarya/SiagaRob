@@ -1,0 +1,54 @@
+{
+  "lokasi": {
+    "adm1": "33",
+    "adm2": "33.74",
+    "adm3": "33.74.02",
+    "adm4": "33.74.02.1001",
+    "provinsi": "Jawa Tengah",
+    "kotkab": "Kota Semarang",
+    "kecamatan": "Semarang Utara",
+    "desa": "Bandarharjo",
+    "lon": 110.416495,
+    "lat": -6.95464,
+    "timezone": "Asia/Jakarta"
+  },
+  "data": [
+    {
+      "lokasi": {
+        "adm4": "33.74.02.1001",
+        "desa": "Bandarharjo"
+      },
+      "cuaca": [
+        [
+          {
+            "datetime": "2026-10-29T15:00:00Z",
+            "local_datetime": "2026-10-29 22:00:00",
+            "t": 28,
+            "hu": 83,
+            "tp": 2.7,
+            "weather": 61,
+            "weather_desc": "Hujan Ringan",
+            "ws": 1.0,
+            "wd": "E",
+            "analysis_date": "2026-10-29T12:00:00",
+            "image": "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-pm.svg"
+          },
+          {
+            "datetime": "2026-10-29T18:00:00Z",
+            "local_datetime": "2026-10-30 01:00:00",
+            "t": 27,
+            "hu": 86,
+            "tp": 0.1,
+            "weather": 1,
+            "weather_desc": "Cerah",
+            "ws": 1.5,
+            "wd": "S",
+            "analysis_date": "2026-10-29T12:00:00",
+            "image": "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah-pm.svg"
+          }
+        ]
+      ]
+    }
+  ]
+}
+

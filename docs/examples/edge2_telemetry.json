@@ -1,0 +1,12 @@
+{
+  "device_id": "edge2",
+  "seq": 40,
+  "rain_mm_h": 24.0,
+  "temp_c": 27.5,
+  "hum_pct": 91,
+  "pump": "ON",
+  "siren": false,
+  "mode": "AUTO",
+  "uptime_ms": 80000
+}
+

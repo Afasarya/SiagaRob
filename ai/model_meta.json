@@ -1,0 +1,87 @@
+{
+  "data_label": "SYNTHETIC",
+  "evaluation_status": "EXPERIMENTAL",
+  "evaluation_note": "Dilatih dan diuji pada data sintetis; bukan observasi lapangan. Bukan prediksi banjir akurat Semarang.",
+  "model": "HistGradientBoostingRegressor",
+  "target_type": "delta",
+  "delta_bounds_cm": [
+    -9.43819590313251,
+    12.115464813858821
+  ],
+  "model_params": {
+    "max_iter": 300,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 40,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "feature_names": [
+    "level",
+    "rate_5",
+    "rain_10",
+    "rain_60"
+  ],
+  "feature_definitions": {
+    "level": "level_cm saat ini",
+    "rate_5": "(level_t - level_{t-5}) / 5 [cm/menit simulasi]",
+    "rain_10": "rata-rata rain_mm_h 10 sampel terakhir",
+    "rain_60": "rata-rata rain_mm_h 60 sampel terakhir"
+  },
+  "warmup_samples": 60,
+  "horizon_steps": 30,
+  "minutes_per_sample": 1,
+  "seconds_real_per_sample": 2,
+  "horizon_sim_minutes": 30,
+  "horizon_real_seconds": 60,
+  "seed": 42,
+  "synthetic_params": {
+    "days": 60,
+    "base_level_cm": 80.0,
+    "tide_amplitude_cm": 15.0,
+    "spring_neap_cm": 5.0,
+    "runoff_coef": 0.25,
+    "noise_sigma_cm": 1.0,
+    "runoff_decay": 0.995,
+    "runoff_lag_min": 15,
+    "tide_period_min": 745.0,
+    "spring_neap_period_min": 21268.8
+  },
+  "split": {
+    "type": "chronological",
+    "shuffle": false,
+    "train_fraction": 0.8,
+    "purge_gap_rows": 30,
+    "rows_total": 86311,
+    "rows_train": 69048,
+    "rows_test": 17233
+  },
+  "metrics": {
+    "mae_model_cm": 2.0256619850139623,
+    "mae_baseline_cm": 2.4795484608839984,
+    "improvement_pct": 18.30520689675161,
+    "target_improvement_pct": 20.0,
+    "target_met": false,
+    "test_rows": 17233,
+    "baseline": "prediksi level saat ini (persistence)",
+    "subsets": {
+      "hujan_signifikan": {
+        "deskripsi": "rain_60 > 5 mm/h",
+        "count": 2718,
+        "mae_model": 2.248201999998543,
+        "mae_baseline": 3.2267816909929126
+      },
+      "level_siaga": {
+        "deskripsi": "level_now >= 105 cm",
+        "count": 852,
+        "mae_model": 1.8069714689574226,
+        "mae_baseline": 2.461251712654573
+      }
+    }
+  },
+  "versions": {
+    "scikit-learn": "1.7.2",
+    "numpy": "2.2.6"
+  },
+  "trained_at": "2026-10-29T14:46:16.221724+00:00"
+}

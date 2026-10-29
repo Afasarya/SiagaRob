@@ -1,0 +1,9 @@
+{
+  "device_id": "edge1",
+  "seq": 42,
+  "level_cm": 82.4,
+  "rate_cm_min": 1.8,
+  "sensor_ok": true,
+  "uptime_ms": 84000
+}
+

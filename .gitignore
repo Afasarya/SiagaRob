@@ -1,0 +1,47 @@
+# Environment & Secrets (Wajib diabaikan, jangan pernah commit kredensial)
+.env
+.env.*
+!.env.example
+dashboard/.env*
+!dashboard/.env.example
+
+# Python
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.cache/
+cache/
+
+# Node.js & Next.js
+node_modules/
+dashboard/node_modules/
+dashboard/.next/
+dashboard/out/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Model artefacts besar & folder output
+ai/artifacts/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build firmware test lokal
+edge*_wokwi/test/build/
+edge2_wokwi/test/vendor/
+
+# Temporary extracts
+siagarob-prd-antigravity/

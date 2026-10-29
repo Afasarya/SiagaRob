@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "name": "aoi_pasang_surut_semarang_pilot",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nama": "AOI Pilot Pasang Surut",
+        "wilayah": "Semarang Utara dan Semarang Timur",
+        "kelurahan_target": "Tanjungmas, Bandarharjo, Kemijen, Kaligawe, Terboyo Kulon, Terboyo Wetan",
+        "catatan": "DIBEKUKAN. Jangan ubah geometri tanpa memberi tahu seluruh tim, karena graf jalan, isi tabel ruas_jalan, dan seluruh prediksi genangan dibangun di atas batas ini. Mengubahnya berarti menjalankan ulang skrip 01 sampai 03.",
+        "perkiraan_dimensi": "sekitar 12,7 km barat-timur, 7,7 km utara-selatan",
+        "dibekukan_pada": "2026-08-24",
+        "verifikasi_batas": {
+          "tanggal": "2026-08-24",
+          "cara": "Batas administratif keenam kelurahan sasaran diambil dari OpenStreetMap lewat Nominatim, lalu kotak pembatasnya diuji apakah seluruhnya berada di dalam AOI.",
+          "hasil": "Keenam kelurahan sasaran seluruhnya berada di dalam AOI.",
+          "margin_km": {
+            "barat": 2.47,
+            "timur": 3.24,
+            "utara": 0.89,
+            "selatan": 2.9
+          },
+          "luas_aoi_km2": 98.4,
+          "luas_gabungan_kelurahan_km2": 27.6,
+          "catatan_ukuran": "AOI sekitar 3,6 kali lebih luas daripada gabungan keenam kelurahan sasaran. Kelebihan itu DISENGAJA dan sebaiknya dipertahankan: mesin routing membutuhkan jaringan jalan di luar wilayah tergenang untuk menghitung rute memutar. AOI yang dipangkas persis di batas kelurahan akan membuat rute alternatif terpotong di tepi peta.",
+          "konsekuensi_yang_harus_diingat": "Karena AOI jauh lebih luas daripada wilayah pesisir sasaran, sebagian besar ruas di dalamnya adalah jalan permukiman di darat yang tidak pernah tergenang. Ini yang membuat sebaran kerentanan condong ke selatan, dan itu sudah diperhitungkan saat mengkalibrasi data contoh di scripts/03_isi_dummy.py.",
+          "sumber": "https://nominatim.openstreetmap.org"
+        }
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.385,
+              -6.995
+            ],
+            [
+              110.5,
+              -6.995
+            ],
+            [
+              110.5,
+              -6.925
+            ],
+            [
+              110.385,
+              -6.925
+            ],
+            [
+              110.385,
+              -6.995
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

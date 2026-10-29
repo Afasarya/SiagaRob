@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "author": "SiagaRob - Edge 1 Pos Air (layout rapi)",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 180,
+      "left": 330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": 40,
+      "left": 45,
+      "attrs": {
+        "distance": "120"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_led",
+      "top": 420,
+      "left": 550,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_status",
+      "top": 410,
+      "left": 635,
+      "rotate": 90,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "ultrasonic:VCC",
+      "esp:5V",
+      "red",
+      [
+        "v20",
+        "h-35",
+        "*",
+        "v15",
+        "h-35"
+      ]
+    ],
+    [
+      "ultrasonic:GND",
+      "esp:GND.1",
+      "black",
+      [
+        "v35",
+        "h-55",
+        "*",
+        "v-15",
+        "h-45"
+      ]
+    ],
+    [
+      "esp:5",
+      "ultrasonic:TRIG",
+      "green",
+      [
+        "h45",
+        "v-155",
+        "h-250",
+        "*",
+        "v15",
+        "h-10"
+      ]
+    ],
+    [
+      "esp:18",
+      "ultrasonic:ECHO",
+      "blue",
+      [
+        "h55",
+        "v-130",
+        "h-260",
+        "*",
+        "v30",
+        "h-10"
+      ]
+    ],
+    [
+      "esp:2",
+      "r_led:1",
+      "green",
+      [
+        "h40",
+        "v100",
+        "*",
+        "v-5"
+      ]
+    ],
+    [
+      "r_led:2",
+      "led_status:A",
+      "green",
+      []
+    ],
+    [
+      "led_status:C",
+      "esp:GND",
+      "black",
+      [
+        "h30",
+        "v30",
+        "*",
+        "v-40",
+        "h30"
+      ]
+    ],
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

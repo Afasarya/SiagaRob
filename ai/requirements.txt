@@ -1,0 +1,7 @@
+# Versi diuji (Python 3.10.11). Task 06 menambah server AI.
+paho-mqtt>=2.0
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.7.2
+joblib==1.6.0
+pytest
